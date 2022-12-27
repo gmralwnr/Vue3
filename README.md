@@ -34,7 +34,34 @@ npm run build
 npm run lint
 ```
 
+
+### calendar
+
+```sh
+npm i v-calendar
+npm add v-calendar@next
+
+```
+### calendar
+```sh
+import 'v-calendar/dist/style.css';
+
+-Method 1: Use Globally
+import VCalendar from 'v-calendar';
+
+// Use plugin with defaults
+app.use(VCalendar, {})
+<!-- Component.vue template -->
+<template>
+  <v-calendar />
+  <v-date-picker v-model="date" />
+</template>
+```
+
+
 ![게시판페이징] <img src=https://user-images.githubusercontent.com/102465955/209620401-2b608656-1833-4114-b31d-f61e65554084.gif width="80%">
 <br/>
 ![게시판] <img src= https://user-images.githubusercontent.com/102465955/209620404-741ef71d-fb49-4615-9e63-e0515548dcdf.gif width="80%">
+
+
 

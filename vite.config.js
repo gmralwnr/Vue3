@@ -22,7 +22,7 @@ export default defineConfig({
 			'/system': {
 				//sysytem url 변경 proxy 는 앞에 url을 변경해주는 역할을 해줌
 				//target: 'http://172.23.102.245:8110/',
-				target: 'http://192.168.0.109:8110/',
+				target: 'http://192.168.0.166:8110/',
 				//109 /166
 				//target: 'http://192.168.0.192:8000/',
 				changeOrigin: true,

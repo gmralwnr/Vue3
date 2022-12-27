@@ -14,6 +14,7 @@ import BoardListView from '@/views/board/BoardListView.vue';
 import BoardDetailView from '@/views/board/BoardDetailView.vue';
 import BoardEditView from '@/views/board/BoardEditView.vue';
 import BoardCreateView from '@/views/board/BoardCreateView.vue';
+import BoardCalendarView from '@/views/board/BoardCalendar.vue';
 //import { createWebHashHistory } from 'vue-router';
 
 const routes = [
@@ -99,6 +100,11 @@ const routes = [
 		path: '/Board/create',
 		component: BoardCreateView,
 		name: 'BoardCreate',
+	},
+	{
+		path: '/Board/calendar',
+		component: BoardCalendarView,
+		name: 'BoardCalendar',
 	},
 ];
 

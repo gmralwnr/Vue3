@@ -21,6 +21,13 @@
 				<button class="btn p-0" @click.stop="$emit('modal')">
 					<i class="bi bi-box2-heart-fill"></i>
 				</button>
+				<!-- <div v-html="likeYn" class="btn p-0"></div> -->
+				<div v-if="likeYn == 'Y'" class="btn p-0">
+					<i class="bi bi-balloon-heart-fill"></i>
+				</div>
+				<div v-else class="btn p-0">
+					<i class="bi bi-balloon-heart"></i>
+				</div>
 			</div>
 		</template>
 	</AppCardBoard>
@@ -41,6 +48,9 @@ defineProps({
 	},
 	hitCnt: {
 		type: [String, Number],
+	},
+	likeYn: {
+		type: String,
 	},
 });
 </script>

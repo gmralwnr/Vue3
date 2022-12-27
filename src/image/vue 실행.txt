@@ -1,0 +1,82 @@
+
+
+npm 버전 node - js 버전 확인
+
+C:\Users\gmral>npm install -g npm
+
+changed 15 packages in 3s
+
+14 packages are looking for funding
+  run `npm fund` for details
+
+C:\Users\gmral>npm -v
+9.1.2
+
+C:\Users\gmral>node -v
+v18.12.1
+
+C:\Users\gmral>
+
+
+
+
+
+선 사항에 대 한 최신 PowerShell을 설치 하세요! https://aka.ms/PSWindows
+
+PS C:\Users\gmral> cd..
+PS C:\Users> cd..
+PS C:\> cd vue
+PS C:\vue> npm init -y
+Wrote to C:\vue\package.json:
+
+{
+  "name": "vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+
+
+PS C:\vue> npm i vue      
+
+added 21 packages, and audited 22 packages in 3s
+
+1 package is looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+PS C:\vue> npm i @vitejs/plugin-vue
+
+added 11 packages, and audited 33 packages in 5s
+
+4 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+PS C:\vue> npm i vite
+
+up to date, audited 33 packages in 921ms
+
+4 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+PS C:\vue> ^C
+PS C:\vue> ^C
+PS C:\vue> npm run dev
+
+> vue@1.0.0 dev
+> vite
+
+
+  VITE v3.2.4  ready in 202 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+

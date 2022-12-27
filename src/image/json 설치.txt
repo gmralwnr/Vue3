@@ -1,0 +1,66 @@
+PS C:\vue\vue3-posts> npm install -D json-server
+
+PS C:\vue\vue3-posts> npx json-server --watch db.json
+
+  \{^_^}/ hi!
+
+  Loading db.json
+  Oops, db.json doesn't seem to exist
+  Creating db.json with some default data
+
+  Done
+-------------------------------------------------------------------
+-조회 할 수 있는 주소 
+-------------------------------------------------------------------
+  Resources
+  http://localhost:3000/posts
+  http://localhost:3000/comments
+  http://localhost:3000/profile
+
+  Home
+  http://localhost:3000
+
+  Type s + enter at any time to create a snapshot of the database
+  Watching...
+
+json 설치 방법 
+
+PS C:\vue\vue3-posts> npx json-server --watch db.json --port 5000
+
+  \{^_^}/ hi!
+
+  Loading db.json
+  Done
+
+  Resources
+  http://localhost:5000/posts
+
+  Home
+  http://localhost:5000
+
+  Type s + enter at any time to create a snapshot of the database
+  Watching...
+
+----------------------------------------------------------------------------------------------------------
+-------->npm run db 실행 하는 법 
+
+-----------------------------------------------------------------------------------------------------------
+
+axios 설치 방법
+
+PS C:\vue\vue3-posts> npm i axios                                
+
+added 7 packages, and audited 268 packages in 942ms
+
+43 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+
+
+-------------------------------------------------------------------------------------------
+npm run db
+npm run dev
+두개 실행 되어야 db까지 호출 할 수 있음 
+http://localhost:5000/posts  => get 방식

@@ -7,6 +7,8 @@ import funcPlugins from './plugins/func';
 import objPlugins from './plugins/obj';
 import person from './plugins/person';
 import globalComponents from '@/plugins/global-components';
+import VCalendar from 'v-calendar';
+import 'v-calendar/dist/style.css';
 //createApp(App).use(router).mount('#app');
 
 const app = createApp(App);
@@ -15,6 +17,8 @@ app.use(objPlugins);
 app.use(person, { name: '홍길동' });
 app.use(globalComponents);
 app.use(router);
+app.use(VCalendar);
+
 app.mount('#app');
 import 'bootstrap/dist/js/bootstrap.js';
 

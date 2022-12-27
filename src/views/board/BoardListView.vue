@@ -6,8 +6,8 @@
 				<h2>게시글 등록</h2>
 			</div>
 
-			<form @submit.prevent="save2">
-				asdasdas{{ form.errors }}
+			<form @submit.prevent="valid">
+				{{ form.errors }}
 				<!-- <div v-if="errors.length">
 					<b>아래 오류를 수정하세요.:</b>
 					<ul>
@@ -85,6 +85,7 @@
 					:content="post.contents"
 					:created-at="post.regDt"
 					:hitCnt="post.hitCnt"
+					:likeYn="post.likeYn"
 					@click="goPage(post.noticeNo)"
 					@modal="openModal(post)"
 					@delete="goDelete(post)"
@@ -209,7 +210,17 @@ const fetchPosts = async () => {
 		const { data } = await getBoard(/*params.value*/); //object
 		posts.value = data.data.list; //실제 data를 넣어주는 경로
 		totalCnt.value = posts.value[0].totCnt;
+		/*for (let i = 0; i < posts.value.length; i++) {
+			if (posts.value[i].likeYn == 'Y') {
+				posts.value[i].likeYn = '<i class="bi bi-balloon-heart-fill"></i>';
+			} else if (posts.value[i].likeYn == 'N') {
+				posts.value[i].likeYn = '<i class="bi bi-balloon-heart"></i>';
+			}
+		}
+ */
 		list.value = []; //보여지는 게시물 리셋
+
+		//페이징
 		let listIdx = listCunt.value * currentPage.value; // 보여질 게시물 index
 		for (let i = 0; i < listCunt.value; i++) {
 			//게시글 수 만큼 루프
@@ -248,7 +259,6 @@ const pageBtnCheck = () => {
 	isBtnNext.value = currentPage.value == totalPage.value ? true : false;
 	isBtnLast.value = currentPage.value == totalPage.value ? true : false;
 };
-console.log('isBtnNext', isBtnNext.value);
 watch(currentPage, (after, before) => {
 	//pageBtnCheck();
 });
@@ -296,19 +306,30 @@ const form = ref({
 	regId: 'admin',
 	errors: [],
 });
-const save2 = async e => {
+const valid = e => {
+	// e.preventDefault();
+
+	// console.log('title: ', form.value.title);
+	// console.log('contents: ', form.value.contents);
+
+	// if (form.value.title != null && form.value.contents != null) {
+	// 	save();
+	// }
+
 	{
-		console.log('e', e);
 		e.preventDefault();
-		if (form.value.title == null) {
-			console.log('ghkghk');
+		form.value.errors = [];
+		let flg = ref(true);
+		console.log('title: ', form.value.title);
+		if (form.value.title == null || form.value.title == '') {
 			form.value.errors.push('제목은 필 수 입니다');
-			return false;
-		} else if (form.value.contents == null) {
-			console.log('dfdF');
+			flg.value = false;
+		}
+		if (form.value.contents == null || form.value.contents == '') {
 			form.value.errors.push('내용은 필 수 값입니다');
-			return false;
-		} else {
+			flg.value = false;
+		}
+		if (flg.value) {
 			save();
 		}
 	}
@@ -324,7 +345,6 @@ var m = today.getMinutes();
 var s = today.getSeconds();
 var dateString = year + '-' + month + '-' + day + ' '; //현재 일자
 dateString += h + ':' + m + ':' + s; //현재 시간
-console.log('dateString' + dateString);
 const save = async () => {
 	try {
 		const data = {
@@ -341,7 +361,12 @@ const save = async () => {
 		console.error(error);
 	}
 };
-const goListPage = () => (open.value = false);
+const goListPage = () => {
+	open.value = false;
+	form.value.title = null;
+	form.value.contents = null;
+	form.value.errors = [];
+};
 router.push({ name: 'BoardList' });
 
 //modalk

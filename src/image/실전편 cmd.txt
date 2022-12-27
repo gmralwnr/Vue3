@@ -1,0 +1,114 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+새로운 기능 및 개선 사항에 대 한 최신 PowerShell을 설치 하세요! https://aka.ms/PSWindows
+
+PS C:\vue> cd vue3-posts
+PS C:\vue\vue3-posts> npm install
+npm WARN deprecated sourcemap-codec@1.4.8: Please use @jridgewell/sourcemap-codec instead
+
+added 148 packages, and audited 149 packages in 7s
+
+31 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+PS C:\vue\vue3-posts> npm run dev
+
+> vue3-posts@0.0.0 dev
+> vite
+
+Port 5173 is in use, trying another one...
+
+  VITE v3.2.5  ready in 379 ms
+
+  ➜  Local:   http://localhost:5174/
+  ➜  Network: use --host to expose
+오후 4:46:52 [vite] hmr update /src/App.vue
+hmr update /src/App.vue?vue&type=style&index=0&scoped=7a7a37b1&lang.css
+일괄 작업을 끝내시겠습니까 (Y/N)? y
+PS C:\vue\vue3-posts> npm run lint
+
+> vue3-posts@0.0.0 lint
+> eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore
+
+PS C:\vue\vue3-posts> npm install bootstrap bootstrap-icons
+
+added 3 packages, and audited 152 packages in 3s
+
+33 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+PS C:\vue\vue3-posts> npm run dev
+
+> vue3-posts@0.0.0 dev
+> vite
+
+Port 5173 is in use, trying another one...
+
+  VITE v3.2.5  ready in 366 ms
+
+  ➜  Local:   http://localhost:5174/
+  ➜  Network: use --host to expose
+오후 4:58:12 [vite] hmr update /src/App.vue
+오후 4:59:57 [vite] hmr update /src/App.vue (x2)      
+오후 5:00:36 [vite] hmr update /src/App.vue (x3)
+오후 5:02:15 [vite] hmr update /src/App.vue (x4)
+오후 5:02:15 [vite] Internal server error: Invalid end tag.
+  Plugin: vite:vue
+  File: C:/vue/vue3-posts/src/App.vue:36:7
+  34 |                                                                  </li>
+  35 |                                                          </ul>
+  36 |                                                  </li>
+     |         ^
+  37 |                                                  <li class="nav-item">
+  38 |                                                          <a class="nav-link disabled">Disabled</a>        
+      at createCompilerError (C:\vue\vue3-posts\node_modules\@vue\compiler-core\dist\compiler-core.cjs.js:19:19) 
+      at emitError (C:\vue\vue3-posts\node_modules\@vue\compiler-core\dist\compiler-core.cjs.js:1613:29)
+      at parseChildren (C:\vue\vue3-posts\node_modules\@vue\compiler-core\dist\compiler-core.cjs.js:933:25)      
+      at parseElement (C:\vue\vue3-posts\node_modules\@vue\compiler-core\dist\compiler-core.cjs.js:1144:22)      
+      at parseChildren (C:\vue\vue3-posts\node_modules\@vue\compiler-core\dist\compiler-core.cjs.js:943:28)      
+      at parseElement (C:\vue\vue3-posts\node_modules\@vue\compiler-core\dist\compiler-core.cjs.js:1144:22)      
+      at parseChildren (C:\vue\vue3-posts\node_modules\@vue\compiler-core\dist\compiler-core.cjs.js:943:28)      
+      at parseElement (C:\vue\vue3-posts\node_modules\@vue\compiler-core\dist\compiler-core.cjs.js:1144:22)      
+      at parseChildren (C:\vue\vue3-posts\node_modules\@vue\compiler-core\dist\compiler-core.cjs.js:943:28)      
+      at parseElement (C:\vue\vue3-posts\node_modules\@vue\compiler-core\dist\compiler-core.cjs.js:1144:22)      
+오후 5:02:33 [vite] hmr update /src/App.vue
+오후 5:02:46 [vite] hmr update /src/App.vue (x2)
+오후 5:03:23 [vite] hmr update /src/App.vue (x3)
+오후 5:06:24 [vite] hmr update /src/App.vue (x4)
+오후 5:07:40 [vite] hmr update /src/App.vue (x5)
+오후 5:08:08 [vite] hmr update /src/App.vue (x6)
+오후 5:08:27 [vite] hmr update /src/App.vue (x7)
+오후 5:08:27 [vite] Internal server error: Attribute name cannot contain U+0022 ("), U+0027 ('), and U+003C (<). 
+  Plugin: vite:vue
+  File: C:/vue/vue3-posts/src/App.vue:10:1
+  8  |          <TheHeader></TheHeader>
+  9  |          <TheView
+  10 |  </template>
+     |   ^
+  11 |
+  12 |  <style scoped></style>
+      at createCompilerError (C:\vue\vue3-posts\node_modules\@vue\compiler-core\dist\compiler-core.cjs.js:19:19) 
+      at emitError (C:\vue\vue3-posts\node_modules\@vue\compiler-core\dist\compiler-core.cjs.js:1613:29)
+      at parseAttribute (C:\vue\vue3-posts\node_modules\@vue\compiler-core\dist\compiler-core.cjs.js:1364:13)    
+      at parseAttributes (C:\vue\vue3-posts\node_modules\@vue\compiler-core\dist\compiler-core.cjs.js:1330:22)   
+      at parseTag (C:\vue\vue3-posts\node_modules\@vue\compiler-core\dist\compiler-core.cjs.js:1199:17)
+      at parseElement (C:\vue\vue3-posts\node_modules\@vue\compiler-core\dist\compiler-core.cjs.js:1128:21)      
+      at parseChildren (C:\vue\vue3-posts\node_modules\@vue\compiler-core\dist\compiler-core.cjs.js:943:28)      
+      at parseElement (C:\vue\vue3-posts\node_modules\@vue\compiler-core\dist\compiler-core.cjs.js:1144:22)      
+      at parseChildren (C:\vue\vue3-posts\node_modules\@vue\compiler-core\dist\compiler-core.cjs.js:943:28)      
+      at Object.baseParse (C:\vue\vue3-posts\node_modules\@vue\compiler-core\dist\compiler-core.cjs.js:858:23)   
+오후 5:08:32 [vite] hmr update /src/App.vue
+오후 5:09:20 [vite] hmr update /src/layouts/TheHeader.vue
+오후 5:09:23 [vite] hmr update /src/layouts/TheHeader.vue (x2)
+일괄 작업을 끝내시겠습니까 (Y/N)? y
+PS C:\vue\vue3-posts> npm install vue-router
+
+added 2 packages, and audited 154 packages in 819ms
+
+34 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities

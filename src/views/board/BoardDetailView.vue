@@ -7,14 +7,20 @@
 		<input type="hidden" v-model="post.newYn" />
 		<input type="hidden" v-model="post.regId" />
 		<hr class="my-4" />
-		<div v-if="post.likeYn == 'N'">
+		<div
+			style="margin-bottom: 10px"
+			v-if="post.likeYn == 'Y'"
+			class="d-flex flex-row-reverse"
+		>
 			<button class="btn p-0" @click="like">
-				<i class="bi bi-balloon-heart"></i>
+				<i style="font-size: 2em" class="bi bi-balloon-heart-fill"></i>
+				<i>좋아요</i>
 			</button>
 		</div>
-		<div v-if="post.likeYn == 'Y'">
-			<button @click="like">
-				<i class="bi bi-balloon-heart-fill"></i>
+		<div style="margin-bottom: 10px" class="d-flex flex-row-reverse" v-else>
+			<button class="btn p-0" @click="like">
+				<i style="font-size: 2em" class="bi bi-balloon-heart"></i>
+				<i>좋아요</i>
 			</button>
 		</div>
 

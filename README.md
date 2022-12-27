@@ -32,6 +32,8 @@ npm run build
 
 ```sh
 npm run lint
-```![게시판페이징] <img src=https://user-images.githubusercontent.com/102465955/209620401-2b608656-1833-4114-b31d-f61e65554084.gif width="80%">
+```
+
+![게시판페이징] <img src=https://user-images.githubusercontent.com/102465955/209620401-2b608656-1833-4114-b31d-f61e65554084.gif width="80%">
 ![게시판] <img src= https://user-images.githubusercontent.com/102465955/209620404-741ef71d-fb49-4615-9e63-e0515548dcdf.gif width="80%>
 

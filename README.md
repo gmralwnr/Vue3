@@ -36,4 +36,6 @@ npm run lint
 
 
 ![게시판페이징]<img src= https://user-images.githubusercontent.com/102465955/209611218-8789c2f3-d6e1-4c80-869e-5bb69765e866.gif  width="80%">
+![Uploading 게시판.gif…]()
+
 
